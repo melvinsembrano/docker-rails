@@ -1,0 +1,4 @@
+ARG BASE_VERSION
+FROM melvinsembrano/rails:${BASE_VERSION}-base
+
+RUN apk update && apk add -u postgresql-dev imagemagick yarn less

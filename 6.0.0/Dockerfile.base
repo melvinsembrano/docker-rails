@@ -1,0 +1,10 @@
+FROM ruby:2.6-alpine
+
+RUN apk add --update alpine-sdk nodejs npm tzdata
+
+RUN gem install rails -v 6.0.0
+RUN gem install nokogiri
+
+RUN apk update && apk add -u postgresql-dev imagemagick yarn less
+
+WORKDIR /app
