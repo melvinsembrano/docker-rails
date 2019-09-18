@@ -16,3 +16,7 @@ RUN apk --no-cache add \
     ttf-freefont \
     mesa-dri-swrast \
     udev 
+
+COPY ./scripts/test.sh /scripts/test.sh
+
+CMD /scripts/test.sh

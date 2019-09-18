@@ -1,3 +1,4 @@
 ARG BASE_VERSION
 FROM melvinsembrano/rails:${BASE_VERSION}-base
 
+CMD bundle exec rails test
