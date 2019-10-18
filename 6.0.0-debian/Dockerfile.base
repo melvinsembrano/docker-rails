@@ -1,0 +1,9 @@
+FROM ruby:2.6-buster
+
+RUN apt update && apt install -y \
+  nodejs npm tzdata libpq-dev imagemagick yarn less
+
+RUN gem install rails -v 6.0.0
+RUN gem install nokogiri bundler
+
+WORKDIR /app
